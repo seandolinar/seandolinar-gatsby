@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: 'Gatsby Default Starter',
+    title: 'Sean Dolinar',
   },
   plugins: [
     'gatsby-plugin-react-helmet',
@@ -17,12 +17,12 @@ module.exports = {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: 'Sean Dolinar',
-        short_name: 'starter',
+        short_name: 'seandolinar',
         start_url: '/',
         background_color: '#663399',
         theme_color: '#663399',
         display: 'minimal-ui',
-        icon: 'src/images/gatsby-icon.png', // This path is relative to the root of the site.
+        // icon: 'src/images/gatsby-icon.png', // This path is relative to the root of the site.
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
