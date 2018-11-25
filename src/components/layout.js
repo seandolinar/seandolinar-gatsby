@@ -27,6 +27,8 @@ const Layout = ({ children }) => (
           ]}
         >
           <html lang="en" />
+          <link href="https://fonts.googleapis.com/css?family=Lato:900" rel="stylesheet" />
+          <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet" />
         </Helmet>
         <Header siteTitle={data.site.siteMetadata.title} />
         <div

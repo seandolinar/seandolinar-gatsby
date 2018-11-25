@@ -3,8 +3,14 @@ import { Link } from 'gatsby'
 
 import Layout from '../components/layout'
 
+import '../styles/index.scss';
+
 const IndexPage = () => (
-  <>seandolinar.com2<br/><a href="//teststatic.seandolinar.com">stats.seandolinar.com</a></>
+  <div className="wrapper-index">
+    <h1 className="site-title">Sean Dolinar</h1>
+    <div></div>
+    <div className="site-blog"><span>blog: </span><a href="//stats.seandolinar.com">stats.seandolinar.com</a></div>
+  </div>
 )
 
 export default IndexPage

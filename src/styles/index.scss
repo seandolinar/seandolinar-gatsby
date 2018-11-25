@@ -1,0 +1,40 @@
+body {
+    background-color: #303030;
+}
+
+.wrapper-index {
+    font-family: 'Lato', Arial, Helvetica, sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #fff;
+
+
+    .site-title {
+        font-size: 4em;
+        text-transform: uppercase;
+        font-weight: 800;
+        line-height: 1;
+        padding: .6em;
+        background-color: #06c;
+
+    }
+
+    .site-blog {
+
+        a {
+            color: #fff;
+            text-decoration-color: #80b2e6;
+
+            &:hover {
+                color: #80b2e6;
+            }
+        }
+    }
+}
+
+a {
+    // t
+}
