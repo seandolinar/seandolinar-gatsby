@@ -1,3 +1,8 @@
-gatsby develop
+#seandolinar.com
 
-gatsby buildb
+Gastby Starter
+
+
+```gatsby develop```
+
+```gatsby build```
