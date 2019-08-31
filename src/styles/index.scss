@@ -12,8 +12,24 @@ h3 {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    // height: 100vh;
     color: #fff;
+
+    header {
+        position: fixed;
+        top: 0;
+        background-color: #06c;
+        width: 100%;
+        text-transform: uppercase;
+
+        div {
+            padding: .4em 2em;
+            max-width: 48em;
+            width: 100%;
+            margin: auto;
+            text-align: left;
+        }
+    }
 
 
     .site-title {
@@ -22,6 +38,7 @@ h3 {
         font-weight: 800;
         line-height: 1;
         padding: .6em;
+        margin-top: 2em; 
         background-color: #06c;
 
     }
