@@ -4,4 +4,11 @@
     margin: 1em 0;
     background-color: #fff;
     color: #000;
+
+
+    &.section-skill {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        grid-gap: 1em;
+    }
 }

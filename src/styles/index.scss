@@ -8,26 +8,43 @@ h3 {
 
 .wrapper-index {
     font-family: 'Lato', Arial, Helvetica, sans-serif;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    // display: grid;
+    grid-template-columns: 1fr 4fr; //repeat(2, 1fr);
+    // flex-direction: column;
+    // justify-content: center;
     align-items: center;
-    // height: 100vh;
-    color: #fff;
+    min-height: 100vh;
+    background-color: #fff;
+    color: #000;
 
     header {
+        display: flex;
         position: fixed;
         top: 0;
-        background-color: #06c;
+        color: #fff;
         width: 100%;
         text-transform: uppercase;
 
-        div {
+        .header-name {
             padding: .4em 2em;
             max-width: 48em;
             width: 100%;
             margin: auto;
             text-align: left;
+            z-index: 1;
+        }
+
+        .header-background {
+            position: absolute;
+            background-color: #06c;
+            width: 100%;
+            height: 100%;
+            left: -100%;
+            transition: left 500ms ease-in-out;
+
+            &.has-mounted {
+                left: 0;
+            }
         }
     }
 
@@ -40,13 +57,14 @@ h3 {
         padding: .6em;
         margin-top: 2em; 
         background-color: #06c;
+        color: #fff;
 
     }
 
     .site-blog {
 
         a {
-            color: #fff;
+            color: #06c;
             text-decoration-color: #80b2e6;
 
             &:hover {
