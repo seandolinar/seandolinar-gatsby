@@ -1,14 +1,37 @@
 .section-box {
     width: 100%;
-    padding: 3em 1em;
-    margin: 1em 0;
+    max-width: 64em;
+    padding: 1em 1em;
+    margin: 0em auto;
     background-color: #fff;
     color: #000;
+
+    h2 {
+        color: #000;
+        background-color: #ccc;
+        font-weight: 400;
+        font-size: 1.2em;
+        padding: .4em;
+        margin: .4em 0;
+    }
 
 
     &.section-skill {
         display: grid;
         grid-template-columns: repeat(5, 1fr);
         grid-gap: 1em;
+        h2 {
+            grid-column: span 5 / auto;
+        }
+        
+    }
+
+    &.section-education {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 1em;
+        h2 {
+            grid-column: span 2 / auto;
+        }
     }
 }

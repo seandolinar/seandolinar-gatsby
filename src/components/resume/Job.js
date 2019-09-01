@@ -3,10 +3,11 @@ import React from 'react';
 import '@styles/resume/job.scss';
 
 
-const Job = ({className, content, company, startDate, endDate}) => {
+const Job = ({className, content, company, startDate, endDate, title}) => {
     return <div className={`job ${className}`}>
-        <h2>{company}</h2>
-        <div className="job-timespan">{startDate} - {endDate}</div>
+        <h3>{company}</h3>
+        <h4>{title}</h4>
+        <div className="job-timespan">{!!endDate ? `${startDate} - ${endDate}` : `${startDate}`}</div>
         {content}
     </div>
 }
