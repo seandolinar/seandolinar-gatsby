@@ -2,7 +2,7 @@ import React, {useState, useEffect} from 'react';
 import { Link } from 'gatsby';
 
 import Layout from '@components/layout';
-import Header from '@components/header';
+import Header from '@components/Header';
 import BusinessCard from '@components/BusinessCard';
 import SectionBox from '@components/resume/SectionBox';
 
@@ -25,8 +25,7 @@ const IndexPage = () => {
 
 
   return <div className={`wrapper-index ${(scrollPosition/window.innerHeight <= .5 ? 'is-business-card' : 'is-resume')}`}>
-    <Header scrollPosition={scrollPosition} />
-    <BusinessCard scrollPosition={scrollPosition}/>
+    <BusinessCard scrollPosition={scrollPosition} />
     <SectionBox
       header="Goals"
       className="section-goals"
