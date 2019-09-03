@@ -1,0 +1,29 @@
+.business-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 36em;
+    height: 100vh;
+    margin: auto;
+    // text-align: center;
+
+    .site-title {
+        font-size: 4em;
+        text-transform: uppercase;
+        font-weight: 800;
+        line-height: 1;
+        padding: .6em;
+        // margin-top: 2em; 
+        background-color: #06c;
+        color: #fff;
+
+    }
+
+    h3 {
+        .wrapper-index.is-business-card & {
+            color: #fff;
+        }
+    }
+    
+}

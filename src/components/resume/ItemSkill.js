@@ -7,4 +7,4 @@ const ItemSkill = ({className, children}) => {
     return <div className={`item-skill ${className}`}>{children}</div>
 }
 
-export default ItemSkill
+export default ItemSkill //React.memo(ItemSkill)

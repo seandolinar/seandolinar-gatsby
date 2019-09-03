@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import { Link } from 'gatsby';
 
 import Layout from '@components/layout';
@@ -11,20 +11,33 @@ import ItemSkill from '@components/resume/ItemSkill';
 import CardSkill from '../components/resume/CardSkill';
 import Job from '@components/resume/Job';
 
-const IndexPage = () => (
-  <div className="wrapper-index">
-    <Header />
-    {/* <BusinessCard /> */}
-    {/* <div>DEV</div> */}
-    {/* <div style={{gridRow: 'span 4/ auto'}}>side col</div> */}
+const IndexPage = () => {
+
+   const [scrollPosition, setScrollPosition] = useState(0);
+
+   useEffect(() => {
+      window.addEventListener('scroll', (evt) => {
+        // console.log(evt, window.scrollY)
+        setScrollPosition(window.scrollY)
+      })
+   }, [])
+
+
+
+  return <div className={`wrapper-index ${(scrollPosition/window.innerHeight <= .5 ? 'is-business-card' : 'is-resume')}`}>
+    <Header scrollPosition={scrollPosition} />
+    <BusinessCard scrollPosition={scrollPosition}/>
     <SectionBox
       header="Goals"
+      className="section-goals"
+      scrollPosition={scrollPosition}
     >
       I enjoy buildings solutions that extract information from data and present it clearly and concisely to effectively communicate with people.
     </SectionBox>
     <SectionBox 
       header="Skills"
       className="section-skill"
+      scrollPosition={scrollPosition}
       >
       <CardSkill
         header="Front End"
@@ -76,6 +89,8 @@ const IndexPage = () => (
     </SectionBox>
     <SectionBox
       header="Jobs – Coding"
+      className="section-jobs-coding"
+      scrollPosition={scrollPosition}
     >
       <Job
         company="FanGraphs"
@@ -117,6 +132,8 @@ const IndexPage = () => (
     </SectionBox>
     <SectionBox
       header="Jobs – Media Production"
+      className="section-jobs-media"
+      scrollPosition={scrollPosition}
     >
       <Job
         company="Pittsburgh Pirates"
@@ -161,6 +178,7 @@ const IndexPage = () => (
     <SectionBox
       header="Education"
       className="section-education"
+      scrollPosition={scrollPosition}
     >
       <Job
         company="Northwestern University"
@@ -186,6 +204,6 @@ const IndexPage = () => (
       />
     </SectionBox>
   </div>
-)
+}
 
 export default IndexPage

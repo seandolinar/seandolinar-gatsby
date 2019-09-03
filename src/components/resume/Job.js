@@ -12,4 +12,4 @@ const Job = ({className, content, company, startDate, endDate, title}) => {
     </div>
 }
 
-export default Job
+export default Job //React.memo(Job)
