@@ -1,13 +1,70 @@
-.card-skill {
-    display: grid;
-    justify-content: center;
-    text-align: center;
-    grid-gap: .4em;
-    align-content: flex-start;
-    border: 1px solid;
+@import '../variables.scss';
 
+
+// .card-skill {
+//     display: grid;
+//     justify-content: center;
+//     text-align: center;
+//     grid-gap: .4em;
+//     align-content: flex-start;
+//     border: 1px solid;
+
+//     h3 {
+//         font-size: 1em;
+//         margin-bottom: 0;
+//     }
+// }
+
+.card-skill {   
+    position: relative;
+    padding: 0 1em;
     h3 {
-        font-size: 1em;
-        margin-bottom: 0;
+        font-size: .8em;
+        background-color: $color-blue-secondary;
+        color: #000;
+        padding: .8em;
+        text-align: center;
+        margin: 0;
+        margin-bottom: .6em;
     }
+
+
+    &:not(:last-child) {
+        &:after {
+            content: '';
+            display: block;
+            position: absolute;
+
+            border-right: 1px solid #000;
+            height: 100%;
+            right: 0;
+            height: 100%;
+            top: 0;
+        }
+    }
+
+    &:first-of-type {
+        @media (max-width: 640px) {
+        
+            grid-column: span 2 / auto;
+
+            display: grid;
+            grid-template: 1fr 1fr;
+
+            h3 {
+                grid-column: span 2 / auto;
+            }
+        }
+    }
+
+    @media (max-width: 640px) {
+        padding-top: 1em;
+
+        &:nth-child(2n) {
+            &:after {
+                display: none;
+            }
+        }
+    }
+
 }

@@ -1,5 +1,7 @@
 .job {
     position: relative;
+    margin-left: 1em;
+    margin-right: 1em;
 
     h2, h3, h4 {
         margin: .2em 0;
@@ -11,6 +13,7 @@
 
     h4 {
         font-size: 1em;
+        margin-top: 0; 
     }
 
     ul {
@@ -22,7 +25,10 @@
             margin-top: .6em;
             font-weight: 600;
             text-decoration: underline;
-            
+            line-height: 1.5;
+
+            padding-left: 1em;
+            text-indent: -1em;
         }
         ul li{
             font-weight: 400;
@@ -30,11 +36,21 @@
             text-decoration: none;
         }
     }
+    .job-header {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-end;
+    }
 
     .job-timespan {
-        position: absolute;
+        // position: absolute;
         font-size: .8em;
-        right: 0;
+        // right: 0;
+        margin-left: auto;
+    }
+
+    @media (max-width: 680px) {
+        margin-top: 1em;
     }
 }
 .section-jobs-media {

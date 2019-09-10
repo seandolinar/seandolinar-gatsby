@@ -75,6 +75,7 @@ h3 {
                 display: flex;
                 max-width: 64em;
                 width: 100%;
+                align-items: center;
                 
                 &-name {
                     font-size: 1em;
@@ -110,6 +111,10 @@ h3 {
             text-align: center;
           
             transition: line-height 300ms ease-in-out, font-size 300ms ease;
+
+            @media (max-width: 375px) {
+                font-size: 2em;
+            }
         }
 
 

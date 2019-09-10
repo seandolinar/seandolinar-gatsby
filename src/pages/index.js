@@ -28,13 +28,14 @@ const IndexPage = () => {
   <div className={`wrapper-index ${(scrollPosition/window.innerHeight <= .5 ? 'is-business-card' : 'is-resume')}`}>
     <BusinessCard scrollPosition={scrollPosition} />
     <SectionBox
-      header="Goals / Why Me"
+      header="What I Do"
       className="section-goals"
       scrollPosition={scrollPosition}
     >
+      <div className="job">
       I enjoy buildings solutions that extract information from data and present it clearly and concisely to effectively communicate with people.
-
-      I love learning new tech when I dive into problems. Collaboration is an important.
+      I love learning new tech when I dive into problems.
+        </div>
     </SectionBox>
     <SectionBox 
       header="Skills"
@@ -71,7 +72,7 @@ const IndexPage = () => {
         <ItemSkill>R</ItemSkill>
       </CardSkill>
       <CardSkill
-        header="Data Visualization"
+        header="Data Viz"
       >
         <ItemSkill>D3</ItemSkill>
         <ItemSkill>three.js</ItemSkill>
@@ -126,7 +127,7 @@ const IndexPage = () => {
           <li>Project Summary</li>
           <ul>
             <li>Used React Native to create React Native iOS app for enterprise use</li>
-            <li>Created a custom GatsbyJS website</li>
+            <li>Created a custom GatsbyJS website for media strategy and production company</li>
             <li>Worked on a development team focusing on creating VueJS front-end components for a political chat web app</li>
 
           </ul>

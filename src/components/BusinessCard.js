@@ -16,7 +16,7 @@ const BusinessCard = ({scrollPosition}) => <div className="business-card">
     <h3>Front End | Data Visualization | Mobile </h3>
     <div className="site-blog"><span>blog: </span><a href="//stats.seandolinar.com">stats.seandolinar.com</a></div>
     <div className="nav-to-resume" onClick={handleScrollResume}>
-        <div>Resume</div>
+        <div>RESUME</div>
         <div className="arrow-down"></div>
     </div>
 </div>
