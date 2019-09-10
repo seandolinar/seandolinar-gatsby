@@ -20,14 +20,14 @@ const IndexPage = () => {
       window.addEventListener('scroll', (evt) => {
         // console.log(evt, window.scrollY)
         setScrollPosition(window.scrollY)
-        setIsResume(scrollPosition/window.innerHeight > .5 )
+        setIsResume(window.scrollY/window.innerHeight > .5 )
       })
    }, [])
 
 
 
   return <>
-  <div className={`wrapper-index ${(!!isResume ? 'is-business-card' : 'is-resume')}`}>
+  <div className={`wrapper-index ${(!isResume ? 'is-business-card' : 'is-resume')}`}>
     <BusinessCard scrollPosition={scrollPosition} />
     <SectionBox
       header="What I Do"
