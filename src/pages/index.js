@@ -2,9 +2,9 @@ import React, {useState, useEffect} from 'react';
 import { Link } from 'gatsby';
 
 import '@components/layout';
-import Header from '@components/Header';
-import BusinessCard from '@components/BusinessCard';
-import SectionBox from '@components/resume/SectionBox';
+import Header from '@components/header';
+import BusinessCard from '@components/businesscard';
+import SectionBox from '@components/resume/sectionbox';
 
 import '@styles/index.scss';
 import ItemSkill from '@components/resume/ItemSkill';
