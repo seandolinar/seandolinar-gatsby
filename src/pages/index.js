@@ -4,7 +4,7 @@ import { Link } from 'gatsby';
 import '../components/layout';
 // import Header from '@components/header';
 import BusinessCard from '../components/BusinessCard';
-import SectionBox from '../components/resume/sectionbox';
+import SectionBox from '../components/resume/SectionBox';
 
 import '../styles/index.scss';
 import ItemSkill from '../components/resume/ItemSkill';
