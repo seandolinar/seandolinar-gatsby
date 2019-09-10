@@ -1,6 +1,6 @@
 import React from 'react';
 
-import '@styles/resume/card-skill.scss';
+import '../../styles/resume/card-skill.scss';
 
 
 const CardSkill = ({className, header, children}) => {

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import _ from 'lodash';
 
-import '@styles/resume/section-box.scss';
+import '../../styles/resume/section-box.scss';
 
 
 // const SectionBox = ({className, children, header, scrollPosition}) => {

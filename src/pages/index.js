@@ -1,15 +1,15 @@
 import React, {useState, useEffect} from 'react';
 import { Link } from 'gatsby';
 
-import '@components/layout';
-import Header from '@components/header';
+import '../components/layout';
+// import Header from '@components/header';
 import BusinessCard from '../components/BusinessCard';
-import SectionBox from '@components/resume/sectionbox';
+import SectionBox from '../components/resume/sectionbox';
 
-import '@styles/index.scss';
-import ItemSkill from '@components/resume/ItemSkill';
+import '../styles/index.scss';
+import ItemSkill from '../components/resume/ItemSkill';
 import CardSkill from '../components/resume/CardSkill';
-import Job from '@components/resume/Job';
+import Job from '../components/resume/Job';
 
 const IndexPage = () => {
 

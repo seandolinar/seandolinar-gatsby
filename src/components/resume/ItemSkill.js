@@ -1,6 +1,6 @@
 import React from 'react';
 
-import '@styles/resume/item-skill.scss';
+import '../../styles/resume/item-skill.scss';
 
 
 const ItemSkill = ({className, children}) => {

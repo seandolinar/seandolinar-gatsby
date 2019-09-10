@@ -1,8 +1,8 @@
 import React from 'react';
-import Header from '@components/header.js';
+import Header from './header.js';
 
 
-import '@styles/business-card.scss';
+import '../styles/business-card.scss';
 
 
 const handleScrollResume = () => {

@@ -1,6 +1,6 @@
 import React from 'react';
 
-import '@styles/resume/job.scss';
+import '../../styles/resume/job.scss';
 
 
 const Job = ({className, content, company, startDate, endDate, title}) => {
