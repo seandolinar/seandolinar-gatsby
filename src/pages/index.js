@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import { Link } from 'gatsby';
 
-import Layout from '@components/layout';
+import '@components/layout';
 import Header from '@components/Header';
 import BusinessCard from '@components/BusinessCard';
 import SectionBox from '@components/resume/SectionBox';
@@ -14,18 +14,20 @@ import Job from '@components/resume/Job';
 const IndexPage = () => {
 
    const [scrollPosition, setScrollPosition] = useState(0);
+   const [isResume, setIsResume] = useState(false);
 
    useEffect(() => {
       window.addEventListener('scroll', (evt) => {
         // console.log(evt, window.scrollY)
         setScrollPosition(window.scrollY)
+        setIsResume(scrollPosition/window.innerHeight > .5 )
       })
    }, [])
 
 
 
   return <>
-  <div className={`wrapper-index ${(scrollPosition/window.innerHeight <= .5 ? 'is-business-card' : 'is-resume')}`}>
+  <div className={`wrapper-index ${(!!isResume ? 'is-business-card' : 'is-resume')}`}>
     <BusinessCard scrollPosition={scrollPosition} />
     <SectionBox
       header="What I Do"
