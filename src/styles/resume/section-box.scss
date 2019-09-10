@@ -1,8 +1,9 @@
 .section-box {
     width: 100%;
-    max-width: 64em;
+    max-width: 60em;
     padding: 1em 1em;
     margin: 0em auto;
+    overflow: hidden;
     // background-color: #fff;
     color: #000;
     opacity: 0;
@@ -10,12 +11,15 @@
     transition: opacity 500ms ease, margin-top 500ms ease;
 
     h2 {
-        color: #000;
-        background-color: #ccc;
+        background-color: #303030;
+        color: #fff;
         font-weight: 400;
         font-size: 1.2em;
-        padding: .4em;
+        padding: 1em .4em;
+        // padding-left: 0;
         margin: .4em 0;
+
+        // transition: 300ms padding-left ease;
     }
 
 
@@ -30,12 +34,24 @@
         
     }
 
-    &.section-education {
+    &.section-jobs-coding, &.section-education  {
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-gap: 1em;
+        grid-template-columns: 1fr .1em 1fr;
+        grid-column-gap: 4em;
         h2 {
-            grid-column: span 2 / auto;
+            grid-column: span 3 / auto;
+        }
+
+        @media (max-width: 420px) {
+            grid-template-columns: 1fr;
+
+            h2 {
+                grid-column: auto;
+            }
+
+            .vr {
+                display: none;
+            }
         }
     }
 
@@ -47,6 +63,30 @@
     &.in-viewport {
         opacity: 1;
         margin-top: 0;
+
+
+
+        .vr {
+            background-color: #303030;
+            height: 70%;
+            width: 100%;
+        }
     }
 
+    .vr {
+        background-color: #303030;
+        height: 0%;
+        width: 100%;
+        align-self: center;
+        transition: 1000ms height ease;
+    }
+
+    
+
+}
+
+.is-resume {
+    h2 {
+        // padding-left: 1em;
+    }
 }

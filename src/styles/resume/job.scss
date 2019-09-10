@@ -1,10 +1,13 @@
 .job {
+    position: relative;
+
     h2, h3, h4 {
         margin: .2em 0;
     }
 
     h3 {
         font-size: 1.2em;
+        margin-top: .8em; 
     }
 
     h4 {
@@ -17,6 +20,41 @@
         li {
             list-style: none;
             margin: 0;
+            margin-top: .6em;
+            font-weight: 600;
+            text-decoration: underline;
+            
+        }
+        ul li{
+            font-weight: 400;
+            margin-top: 0;
+            text-decoration: none;
+        }
+    }
+
+    .job-timespan {
+        position: absolute;
+        font-size: .8em;
+        right: 0;
+    }
+}
+
+
+.section-education {
+    ul {
+        li {
+            
+        }
+        ul li {
+            display: inline-block;
+            // margin-right: 1em;
+            // margin
+
+            &:not(:last-child):after {
+                content: ', ';
+                margin-right: .2em;
+
+            }
         }
     }
 }

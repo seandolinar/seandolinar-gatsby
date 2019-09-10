@@ -1,5 +1,9 @@
 body {
     background-color: #303030;
+
+    * {
+        font-family: 'Lato', Arial, Helvetica, sans-serif;
+    }
 }
 
 h3 {
@@ -17,6 +21,11 @@ h3 {
     background-color: #fff;
     // color: #000;
     transition: background-color 300ms ease-out;
+
+    padding-bottom: 4em;
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,.16), 
+                0 2px 2px 0 rgba(0,0,0,.16), 
+                0 1px 0 1px rgba(0,0,0,.08);
 
     &.is-business-card {
         background: #303030;
@@ -118,6 +127,11 @@ h3 {
         + h3 {
             margin-top: 2em;
             transition: margin-top 300ms ease;
+
+            @media (max-width: 420px) {
+                padding: 0 1em;
+                font-size: 1em;
+            }
         }
      
         &.is-fixed  + h3 {
@@ -153,7 +167,7 @@ h3 {
 
 
     .site-blog {
-
+        color: #fff;
         a {
             color: #06c;
             text-decoration-color: #80b2e6;
@@ -167,4 +181,13 @@ h3 {
 
 a {
     // t
+}
+
+
+footer {
+    height: 7.5rem;
+    background-color: #80b2e6;
+    z-index: -10;
+    position: relative;
+
 }

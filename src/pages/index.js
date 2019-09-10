@@ -24,14 +24,17 @@ const IndexPage = () => {
 
 
 
-  return <div className={`wrapper-index ${(scrollPosition/window.innerHeight <= .5 ? 'is-business-card' : 'is-resume')}`}>
+  return <>
+  <div className={`wrapper-index ${(scrollPosition/window.innerHeight <= .5 ? 'is-business-card' : 'is-resume')}`}>
     <BusinessCard scrollPosition={scrollPosition} />
     <SectionBox
-      header="Goals"
+      header="Goals / Why Me"
       className="section-goals"
       scrollPosition={scrollPosition}
     >
       I enjoy buildings solutions that extract information from data and present it clearly and concisely to effectively communicate with people.
+
+      I love learning new tech when I dive into problems. Collaboration is an important.
     </SectionBox>
     <SectionBox 
       header="Skills"
@@ -93,7 +96,7 @@ const IndexPage = () => {
     >
       <Job
         company="FanGraphs"
-        startDate={'February 2015'}
+        startDate={'2015'}
         endDate={'Present'}
         title={'Front End Engineer'}
         content={<ul>
@@ -113,6 +116,7 @@ const IndexPage = () => {
           </ul>
         </ul>}
       />
+      <div className="vr"></div>
       <Job
         company="Consultant"
         startDate={'2015'}
@@ -195,6 +199,7 @@ const IndexPage = () => {
           </ul>
         </ul>}
       />
+      <div className="vr"></div>
       <Job
         company="University of Pittsburgh"
         startDate={'2004'}
@@ -203,6 +208,9 @@ const IndexPage = () => {
       />
     </SectionBox>
   </div>
+  <footer>
+  </footer>
+  </>
 }
 
 export default IndexPage

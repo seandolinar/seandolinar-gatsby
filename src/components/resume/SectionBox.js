@@ -48,13 +48,29 @@ class SectionBox extends React.Component {
         super(props);
 
         this.elemSection = React.createRef();
+
+        this.state = {inViewport: false}
+    }
+
+    componentDidUpdate(prevProps,prevState) {
+        const {className, children, header, scrollPosition} = this.props;
+        const {inViewport} = this.state;
+
+        if (!!inViewport) {
+            return
+        }
+
+        if (prevProps.scrollPosition !== scrollPosition) {
+            this.setState({inViewport:  !!this.elemSection.current ? ((scrollPosition + .8 * window.innerHeight) / this.elemSection.current.offsetTop) > 1 : false});
+        }
     }
 
     render() {
 
         const {className, children, header, scrollPosition} = this.props;
+        const {inViewport} = this.state;
 
-        const inViewport = !!this.elemSection.current ? ((scrollPosition + .8 * window.innerHeight) / this.elemSection.current.offsetTop) > 1 : false;
+        // this.setState({inViewport:  !!this.elemSection.current ? ((scrollPosition + .8 * window.innerHeight) / this.elemSection.current.offsetTop) > 1 : false});
         
         return <section className={`section-box ${className} ${inViewport ? 'in-viewport' : ''}`} ref={this.elemSection} >
             <h2>{header}</h2>

@@ -1,11 +1,16 @@
 .business-card {
     display: flex;
+    position: relative;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     max-width: 36em;
-    height: 100vh;
+    min-height: 100vh;
     margin: auto;
+    margin-top: 0;
+    transition: margin-top 300ms ease;
+    color: #fff;
+
     // text-align: center;
 
     .site-title {
@@ -25,5 +30,58 @@
             color: #fff;
         }
     }
+
+    .nav-to-resume {
+        position: absolute;
+        bottom: 10vh;
+        cursor: pointer;
+
+        &:hover {
+            color:#80b2e6;
+
+            .arrow-down:after {
+                margin-top: .4em; 
+                border-top: .6em solid #80b2e6;
+                transform: scale(2);
+            }
+        } 
+    }
+    .arrow-down {
+        position: relative;       
+        margin-top: .2em;      
+        text-align: center;
+
+        animation: bounce 2000ms ease infinite alternate;
+        &:after {
+            content: '';
+            display: inline-block;
+            margin: auto;
+            border-left: 1em solid transparent;
+            border-right: 1em solid transparent;
+            border-top: .6em solid #fff;     
+
+            transition: 300ms transform;
+            
+        }
+    }
+
     
 }
+
+
+
+
+@keyframes bounce {
+    0% {
+        top: 0;
+    }
+    5% {
+        top: .4em;
+    }
+    20% {
+        top: 0;
+    }
+    100% {
+        top: 0;
+    }
+  }
