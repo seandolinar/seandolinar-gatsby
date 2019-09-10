@@ -3,7 +3,7 @@ import { Link } from 'gatsby';
 
 import '@components/layout';
 import Header from '@components/header';
-import BusinessCard from '@components/businesscard';
+import BusinessCard from '../components/BusinessCard';
 import SectionBox from '@components/resume/sectionbox';
 
 import '@styles/index.scss';
