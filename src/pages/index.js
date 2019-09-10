@@ -55,7 +55,7 @@ const IndexPage = () => {
       <CardSkill
         header="Back End"
       >
-        <ItemSkill>Node</ItemSkill>
+        <ItemSkill>Node.js</ItemSkill>
         <ItemSkill>.NET</ItemSkill>
         <ItemSkill>Python</ItemSkill>
         <ItemSkill>PHP</ItemSkill>

@@ -1,29 +1,5 @@
 import React, { useEffect, useState } from 'react';
 
-// const Header = ({ scrollPosition }) => {
-
-//   const [hasMounted, setHasMounted] = useState(false);
-
-//   useEffect(() => {
-//     if (scrollPosition / window.innerHeight > .5) {
-//       setHasMounted(true)
-//     }
-//     else {
-//       setHasMounted(false)
-//     }
-//   })
-
-//   return <header style={{height: 72}}>
-//     <div className={`header-content ${hasMounted ? 'has-mounted' : ''}`}>
-//       <h1 className="header-content-name">Sean Dolinar</h1>
-//       <a href="https://stats.seandolinar.com">Blog</a>
-//     </div>
-//     <div className={`header-background`}></div>
-//   </header>
-// }
-
-
-
 
 class Header extends React.Component {
   constructor(props) {
@@ -59,8 +35,9 @@ class Header extends React.Component {
        
       return  <header className={newHeight <  0  ? 'is-fixed' : ''} 
         ref={this.elemHeader}>
-      <h1 className="header-content-name">Sean Dolinar</h1>
-      <div className={`header-content`} className={isFixed ? 'has-mounted' : ''}> 
+      
+      <div className={`header-content ${(isFixed ? 'has-mounted' : '')}`}> 
+       <h1 className="header-content-name">Sean Dolinar</h1>
         <a href="https://stats.seandolinar.com">Blog</a>
       </div>
       <div className={`header-background`}></div>
