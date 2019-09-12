@@ -10,6 +10,7 @@
     margin-top: 0;
     transition: margin-top 300ms ease;
     color: #fff;
+    padding-bottom: 20vh;
 
     // text-align: center;
 
@@ -33,7 +34,7 @@
 
     .nav-to-resume {
         position: absolute;
-        bottom: 10vh;
+        bottom: 16vh;
         cursor: pointer;
         opacity: 1;
         transition: 600ms opacity;
@@ -48,6 +49,10 @@
                 transform: scale(2);
             }
         } 
+
+        // @media () {
+            
+        // }
     }
     .arrow-down {
         position: relative;       
