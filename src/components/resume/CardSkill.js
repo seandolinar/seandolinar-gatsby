@@ -10,4 +10,4 @@ const CardSkill = ({className, header, children}) => {
     </div>
 }
 
-export default CardSkill //React.memo(CardSkill)
+export default CardSkill
