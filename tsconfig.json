@@ -1,0 +1,22 @@
+{
+    "compilerOptions": {
+        "outDir": "./dist/",
+        "sourceMap": true,
+        "noImplicitAny": true,
+        "esModuleInterop": true,
+        "allowSyntheticDefaultImports": true,
+        "allowJs": true,
+        "module": "commonjs",
+        "target": "esnext",
+        "jsx": "react",
+        "lib": ["dom", "esnext"],
+        "baseUrl": "./",
+        "paths": {
+            "@components/*": ["src/components/*"]
+        }
+    },
+    "include": [
+        "./src/**/*"
+    ],
+    "typeRoots": ["node_modules/@types"]
+}
