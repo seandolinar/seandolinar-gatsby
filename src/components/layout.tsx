@@ -18,7 +18,7 @@ interface HeaderData {
   };
 }
 
-const Layout = ({ children }: LayoutProps): JSX.Element => (
+const Layout: React.FC<LayoutProps> = ({ children }) => (
   <StaticQuery
     query={graphql`
       query SiteTitleQuery {

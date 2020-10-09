@@ -8,11 +8,11 @@ interface CardSkillProps {
   children: React.ReactNode;
 }
 
-const CardSkill = ({
+const CardSkill: React.FC<CardSkillProps> = ({
   className,
   header,
   children,
-}: CardSkillProps): JSX.Element => {
+}) => {
   return (
     <div className={`card-skill ${className}`}>
       <h3>{header}</h3>

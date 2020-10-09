@@ -11,14 +11,14 @@ interface JobProps {
   title: string;
 }
 
-const Job = ({
+const Job: React.FC<JobProps> = ({
   className,
   content,
   company,
   startDate,
   endDate,
   title,
-}: JobProps): JSX.Element => {
+}) => {
   return (
     <div className={`job ${className}`}>
       <div className="job-header">

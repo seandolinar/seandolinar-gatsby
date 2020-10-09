@@ -9,7 +9,7 @@ import Job from '@components/resume/Job.tsx';
 import '@styles/layout.scss';
 import '@styles/index.scss';
 
-const IndexPage = (): React.ReactNode => {
+const IndexPage: React.FC = () => {
   const [scrollPosition, setScrollPosition] = useState(0);
 
   useEffect(() => {
