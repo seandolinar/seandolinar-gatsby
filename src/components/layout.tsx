@@ -1,12 +1,24 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import Helmet from 'react-helmet'
-import { StaticQuery, graphql } from 'gatsby'
+import React from 'react';
+import PropTypes from 'prop-types';
+import Helmet from 'react-helmet';
+import { StaticQuery, graphql } from 'gatsby';
 
-import Header from './Header'
-import './layout.css'
+import Header from './Header';
+import '../styles/layout.scss';
 
-const Layout = ({ children }) => (
+interface LayoutProps {
+  children: React.ReactNode;
+}
+
+interface HeaderData {
+  site: {
+    siteMetadata: {
+      title: string;
+    };
+  };
+}
+
+const Layout = ({ children }: LayoutProps): JSX.Element => (
   <StaticQuery
     query={graphql`
       query SiteTitleQuery {
@@ -17,7 +29,7 @@ const Layout = ({ children }) => (
         }
       }
     `}
-    render={data => (
+    render={(data: HeaderData): JSX.Element => (
       <>
         <Helmet
           title={data.site.siteMetadata.title}
@@ -27,8 +39,14 @@ const Layout = ({ children }) => (
           ]}
         >
           <html lang="en" />
-          <link href="https://fonts.googleapis.com/css?family=Lato:900" rel="stylesheet" />
-          <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet" />
+          <link
+            href="https://fonts.googleapis.com/css?family=Lato:900"
+            rel="stylesheet"
+          />
+          <link
+            href="https://fonts.googleapis.com/css?family=Titillium+Web"
+            rel="stylesheet"
+          />
         </Helmet>
         <Header siteTitle={data.site.siteMetadata.title} />
         <div
@@ -44,10 +62,10 @@ const Layout = ({ children }) => (
       </>
     )}
   />
-)
+);
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
-}
+};
 
-export default Layout
+export default Layout;

@@ -1,7 +1,6 @@
-import React from 'react'
+import React from 'react';
 import Layout from '../components/layout';
-import { Link } from 'gatsby'
-
+import { Link } from 'gatsby';
 
 const SecondPage = (): JSX.Element => (
   <Layout>
@@ -9,6 +8,6 @@ const SecondPage = (): JSX.Element => (
     <p>Welcome to page 2</p>
     <Link to="/">Go back to the homepage</Link>
   </Layout>
-)
+);
 
-export default SecondPage
+export default SecondPage;
