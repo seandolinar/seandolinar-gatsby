@@ -1,44 +1,32 @@
 import React, { useEffect, useState } from 'react';
 
-class Header extends React.Component {
-  constructor(props) {
-    super(props);
+const Header = ({ scrollPosition }) => {
+  const elemHeader = React.createRef();
 
-    this.state = { initialOffsetTop: null };
+  const [initialOffsetTop, setInitialOffsetTop] = useState(null);
 
-    this.elemHeader = React.createRef();
+  useEffect(() => {
+    setInitialOffsetTop(elemHeader.current.offsetTop);
+  }, []);
+
+  let newHeight = 0;
+  let isFixed = false;
+
+  if (initialOffsetTop) {
+    newHeight = initialOffsetTop - scrollPosition;
+
+    isFixed = 200 - newHeight <= 0;
   }
 
-  componentDidMount() {
-    this.setState({ initialOffsetTop: this.elemHeader.current.offsetTop });
-  }
-
-  render() {
-    const { className, children, header, scrollPosition } = this.props;
-    const { initialOffsetTop } = this.state;
-
-    let offsetHeight = 0;
-    let newHeight = 0;
-    let isFixed = false;
-
-    if (initialOffsetTop) {
-      const inViewport = scrollPosition / initialOffsetTop > 1;
-
-      newHeight = initialOffsetTop - scrollPosition;
-
-      isFixed = 200 - newHeight <= 0;
-    }
-
-    return (
-      <header className={newHeight < 0 ? 'is-fixed' : ''} ref={this.elemHeader}>
-        <div className={`header-content ${isFixed ? 'has-mounted' : ''}`}>
-          <h1 className="header-content-name">Sean Dolinar</h1>
-          <a href="https://stats.seandolinar.com">Blog</a>
-        </div>
-        <div className={`header-background`}></div>
-      </header>
-    );
-  }
-}
+  return (
+    <header className={newHeight < 0 ? 'is-fixed' : ''} ref={elemHeader}>
+      <div className={`header-content ${isFixed ? 'has-mounted' : ''}`}>
+        <h1 className="header-content-name">Sean Dolinar</h1>
+        <a href="https://stats.seandolinar.com">Blog</a>
+      </div>
+      <div className={`header-background`}></div>
+    </header>
+  );
+};
 
 export default Header;
