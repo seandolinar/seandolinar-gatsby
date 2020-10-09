@@ -18,15 +18,18 @@ const IndexPage: React.FC = () => {
     });
   }, []);
 
+  let className = 'is-business-card';
+
+  if (typeof window !== `undefined`) {
+    className =
+      scrollPosition / window.innerHeight <= 0.5
+        ? 'is-business-card'
+        : 'is-resume';
+  }
+
   return (
     <>
-      <div
-        className={`wrapper-index ${
-          scrollPosition / window.innerHeight <= 0.5
-            ? 'is-business-card'
-            : 'is-resume'
-        }`}
-      >
+      <div className={`wrapper-index ${className}`}>
         <BusinessCard scrollPosition={scrollPosition} />
         <SectionBox
           header="What I Do"
