@@ -1,7 +1,11 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 
-const Header = ({ scrollPosition }) => {
-  const elemHeader = React.createRef();
+interface HeaderProps {
+  scrollPosition?: number;
+}
+
+const Header: React.FC<HeaderProps> = ({ scrollPosition = null }) => {
+  const elemHeader = useRef<HTMLHeadingElement>(null);
 
   const [initialOffsetTop, setInitialOffsetTop] = useState(null);
 

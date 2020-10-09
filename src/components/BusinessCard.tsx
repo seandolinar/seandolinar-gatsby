@@ -1,5 +1,5 @@
 import React from 'react';
-import Header from '@components/Header';
+import Header from '@components/Header.tsx';
 
 import '@styles/business-card.scss';
 
@@ -13,9 +13,7 @@ interface BusinessCardProps {
   scrollPosition: number;
 }
 
-const BusinessCard = ({
-  scrollPosition,
-}: BusinessCardProps): React.ReactNode => (
+const BusinessCard: React.FC<BusinessCardProps> = ({ scrollPosition }) => (
   <div className="business-card">
     <Header scrollPosition={scrollPosition} />
     <h3>Front End | Data Visualization | Mobile </h3>
