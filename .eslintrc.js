@@ -35,15 +35,7 @@ module.exports = {
 
 
   rules: {
-    // 'sort-imports': [
-    //   'error',
-    //   {
-    //     ignoreCase: false,
-    //     ignoreDeclarationSort: false,
-    //     ignoreMemberSort: false,
-    //     memberSyntaxSortOrder: ['none', 'all', 'multiple', 'single'],
-    //   },
-    // ],
+    "no-extra-boolean-cast": "off"
   },
   "env": {
     "browser": true,

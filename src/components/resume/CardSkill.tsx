@@ -3,7 +3,7 @@ import React from 'react';
 import '@styles/resume/card-skill.scss';
 
 interface CardSkillProps {
-  className: string;
+  className?: string;
   header: string;
   children: React.ReactNode;
 }
@@ -12,7 +12,7 @@ const CardSkill = ({
   className,
   header,
   children,
-}: CardSkillProps): React.ReactNode => {
+}: CardSkillProps): JSX.Element => {
   return (
     <div className={`card-skill ${className}`}>
       <h3>{header}</h3>

@@ -3,14 +3,11 @@ import React from 'react';
 import '@styles/resume/item-skill.scss';
 
 interface ItemSkillProps {
-  className: string;
+  className?: string;
   children: React.ReactNode;
 }
 
-const ItemSkill = ({
-  className,
-  children,
-}: ItemSkillProps): React.ReactNode => {
+const ItemSkill = ({ className, children }: ItemSkillProps): JSX.Element => {
   return <div className={`item-skill ${className}`}>{children}</div>;
 };
 

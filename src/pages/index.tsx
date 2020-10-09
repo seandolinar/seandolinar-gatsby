@@ -1,11 +1,7 @@
 import React, { useState, useEffect } from 'react';
-// import { Link } from 'gatsby';
 
-// import Layout from '@components/layout.tsx';
-// import Header from '@components/Header';
 import BusinessCard from '@components/BusinessCard.tsx';
-import SectionBox from '@components/resume/SectionBox';
-
+import SectionBox from '@components/resume/SectionBox.tsx';
 import ItemSkill from '@components/resume/ItemSkill.tsx';
 import CardSkill from '@components/resume/CardSkill.tsx';
 import Job from '@components/resume/Job.tsx';
