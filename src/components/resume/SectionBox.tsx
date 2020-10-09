@@ -4,17 +4,17 @@ import '@styles/resume/section-box.scss';
 
 interface SectionBoxProps {
   className: string;
-  children: React.ReactNode;
   header?: string;
   scrollPosition: number;
+  children: React.ReactNode;
 }
 
-const SectionBox: React.FC = ({
+const SectionBox: React.FC<SectionBoxProps> = ({
   className,
   children,
   header,
   scrollPosition,
-}: SectionBoxProps) => {
+}) => {
   const elemSection = useRef<HTMLHeadingElement>(null);
 
   const [inViewport, setInViewport] = useState(false);
