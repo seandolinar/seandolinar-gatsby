@@ -50,38 +50,40 @@ const IndexPage: React.FC = () => {
           <CardSkill header="Front End">
             <ItemSkill>JavaScript</ItemSkill>
             <ItemSkill>React</ItemSkill>
-            <ItemSkill>React Native</ItemSkill>
-            <ItemSkill>VueJS</ItemSkill>
             <ItemSkill>GatsbyJS</ItemSkill>
+            <ItemSkill>React Native</ItemSkill>
+            <ItemSkill>Ionic / Capacitor</ItemSkill>
+            <ItemSkill>VueJS</ItemSkill>
             <ItemSkill>Webpack</ItemSkill>
-            <ItemSkill>HTML/CSS</ItemSkill>
           </CardSkill>
           <CardSkill header="Back End">
             <ItemSkill>Node.js</ItemSkill>
             <ItemSkill>.NET</ItemSkill>
             <ItemSkill>Python</ItemSkill>
             <ItemSkill>PHP</ItemSkill>
+            <ItemSkill>WordPress</ItemSkill>
           </CardSkill>
-          <CardSkill header="Data">
+          <CardSkill header="Database">
             <ItemSkill>SQL</ItemSkill>
             <ItemSkill>REST</ItemSkill>
             <ItemSkill>GraphQL</ItemSkill>
             <ItemSkill>Postgres</ItemSkill>
             <ItemSkill>MongoDB</ItemSkill>
-            <ItemSkill>R</ItemSkill>
           </CardSkill>
-          <CardSkill header="Data Viz">
+          <CardSkill header="Data Analysis">
             <ItemSkill>D3</ItemSkill>
             <ItemSkill>three.js</ItemSkill>
             <ItemSkill>Tableau</ItemSkill>
             <ItemSkill>ggplot2</ItemSkill>
+            <ItemSkill>R</ItemSkill>
           </CardSkill>
-          <CardSkill header="Media">
+          <CardSkill header="Misc">
+            <ItemSkill>6502 Assembly / NES</ItemSkill>
+            <ItemSkill>Final Cut Pro</ItemSkill>
             <ItemSkill>Photoshop</ItemSkill>
             <ItemSkill>Affinity Designer</ItemSkill>
             <ItemSkill>Proto.io</ItemSkill>
-            <ItemSkill>Sketch</ItemSkill>
-            <ItemSkill>Final Cut Pro</ItemSkill>
+            <ItemSkill>Virtual Events</ItemSkill>
           </CardSkill>
         </SectionBox>
         <SectionBox
